@@ -1,0 +1,35 @@
+.App{
+  background: black;
+}
+.App h1{
+  color: white;
+  text-align: center;
+  padding-top: 2%;
+}
+.products{
+  padding: 2% 4%;
+  display: grid;
+  grid-template-columns: repeat(4 , 1fr);
+}
+.product{
+  background: white;
+  padding: 2% 2% 4% 2%;
+  margin: 4%;
+  text-align: center;
+}
+.product img{
+  width: 100%;
+}
+.product-description{
+  margin-top: 4%;
+}
+@media (max-width:800px){
+  .products{
+    grid-template-columns: repeat(2 , 1fr);
+  }
+}
+@media (max-width:500px){
+  .products{
+    grid-template-columns: repeat(1 , 1fr);
+  }
+}

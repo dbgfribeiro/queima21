@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "name" : "Saco",
+        "image" : "images/bag.jpg",
+        "price" : "2.00€"
+    },
+    {
+        "id" : 2,
+        "name" : "Isqueiro",
+        "image" : "images/lighter.jpg",
+        "price" : "0.50€"
+    },    {
+        "id" : 3,
+        "name" : "Saco",
+        "image" : "images/notebook.jpg",
+        "price" : "4.00€"
+    },
+    {
+        "id" : 4,
+        "name" : "Garrafa",
+        "image" : "images/can.jpg",
+        "price" : "3.00€"
+    }
+
+]
