@@ -1,23 +1,40 @@
+import { useState } from 'react';
 import './App.css';
-import Data from "./products.json";
+import Products from './Products.jsx'
+import Cart from './Cart.jsx'
 
 function App() {
+
+  const [page, setPage] = useState('products');
+  const [cart, setCart] = useState([]);
+
+  const PAGE_PRODUCTS = 'products';
+  const PAGE_CART = 'cart';
+  const navigateTo = (displayPage) => {
+    setPage(displayPage);
+  };
+
+  const addToCart = (product) => {
+    setCart([...cart, { ...product}]);
+  };
+  const removeFromCart = (productToRemove) => { 
+    setCart(cart.filter(product => product !== productToRemove));
+  };
+
+ 
   return (
     <div className="App">
-    <h1>Produtos</h1>
-      <div className="products">
-        { Data.map(product => {
-          return(
-            <div className="product" key={product.id}>
-              <img src={product.image} alt="logo" />
-              <div className="product-description">
-                <h3>{product.name}</h3>
-                <p>{product.price}</p>
-              </div>
-            </div>
-          )
-        })}
-      </div>
+    <header>
+      {page === PAGE_PRODUCTS ? (
+        <button onClick={() => navigateTo(PAGE_CART)}>CART ({cart.length})</button>
+      ) : (
+        <button onClick={() => navigateTo(PAGE_PRODUCTS)}>VIEW PRODUCTS</button>
+      )}
+    </header>
+
+    {page === PAGE_PRODUCTS && <Products addToCart={addToCart}/>}
+    {page === PAGE_CART && <Cart cart={cart} removeFromCart={removeFromCart}/>}
+
     </div>
   );
 }

@@ -1,11 +1,21 @@
-.App{
+body{
   background: black;
+}
+header{
+  background-color: #fff;
+  padding: 2%;
+  text-align: right;
+}
+header button{
+  font-size: 20px;
+  padding: 1%;
 }
 .App h1{
   color: white;
   text-align: center;
   padding-top: 2%;
 }
+/*------products-list-------*/
 .products{
   padding: 2% 4%;
   display: grid;
@@ -32,4 +42,21 @@
   .products{
     grid-template-columns: repeat(1 , 1fr);
   }
+}
+
+/*------cart-list-------*/
+.cart-products{
+  padding: 2% 4%;
+  display: block;
+}
+.cart-product{
+  background: white;
+  padding: 2%;
+  margin: 4%;
+  text-align: left;
+  height: 10vw;
+  display: flex;
+}
+.cart-product img{
+  height: 100%;
 }
