@@ -1,5 +1,5 @@
 import React from 'react'
-import Data from "./Products.json";
+import Data from "./products.json";
 
 
 export default function Products({addToCart}){
